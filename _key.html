@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,noarchive,nofollow">
+<title>投稿の削除</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="common.css" type="text/css">
+</head>
+<body id="top">
+<div class="container">
+<div class="row">
+<header class="col-xs-12">
+    <h1>投稿の削除</h1>
+    <p class="btn-group">
+        <a class="btn btn-default" href="{$BBSPATH}">掲示板トップ</a>
+        <a class="btn btn-default" href="{$BBSPATH_ARCHIVE}">過去ログ</a>
+        <a class="btn btn-default" href="{$BBSPATH_RSS}" target="_blank">RSS</a>
+    </p>
+</header><!-- .col-xs-12 -->
+<div class="col-xs-12">
+
+{$id}. <strong>{$subject}</strong> - {$name} - {$time}<br>
+
+<p>{$body_html}</p>
+{$file_link}
+
+<hr>
+
+<form class="form-horizontal" action="{$BBSPATH}" method="post" onsubmit="this.submit.disabled=true;">
+<input type="hidden" name="{$PARAM_MODE}" value="{$MODE_KEY}">
+<input type="hidden" name="{$PARAM_POSTKEY}" value="{$post_key}"><!-- Ver.0.4 -->
+<input type="hidden" name="{$PARAM_ID}" value="{$id}">
+
+<div class="form-group col-xs-12">
+    この投稿の削除キーまたは管理者パスワードを入力して下さい<br>
+    <input class="form-control" type="password" name="{$PARAM_PASSWORD}" value="" size="16" maxlength="{$SIZE_PASSWORD}" placeholder="投稿時の削除キー／管理者パスワード">
+</div>
+<div class="form-group col-xs-12">
+    <input class="btn btn-primary" type="submit" name="submit" value="削除する" {$submit_button}>
+    <!-- エラーメッセージ -->
+    <p class="error">{$error}</p>
+</div>
+</form>
+
+
+<hr>
+
+</div><!-- .col-* -->
+<footer class="col-xs-12">
+    <p class="btn-group">
+    <a class="btn btn-default" href="#top">↑ページ上部へ戻る</a>
+    </p>
+</footer>
+</div>
+</div><!-- .container -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* 文字色、背景色 */
+body {
+color: #333;
+background-color: #eee;
+}
+/* リンクの色 */
+a:link {
+    color: #009;
+}
+a:visited {
+    color: #909;
+}
+/* フォーム 行 (隠す。スパム検出用) */
+.jb-row-as {
+    display: none;
+    visibility: hidden;
+}
+/* タブレット・PC */
+@media screen and (min-width: 768px) {
+    /* フォーム - 名前 */
+    .jb-txt-name {
+        width: 20em;
+    }
+    /* フォーム - 件名 */
+    .jb-txt-subject {
+        width: 30em;
+    }
+    /* フォーム - 本文 */
+    .jb-txt-body {
+        width: 40em;
+        height: 6em ! important;
+    }
+    /* フォーム - 削除キー */
+    .jb-txt-password {
+        width: 10em;
+    }
+}
+/* タイトル部分・文字サイズ */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2em;
+}
+span.archive-active {
+    font-weight: bold;
+}
+.error {
+    color: green;
+}
+span.file-caption {
+    display: block;
+}
+span.file-info {
+    display: block;
+}

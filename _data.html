@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,noarchive,nofollow">
+<title>{$subject}</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="common.css" type="text/css">
+</head>
+<body id="top">
+<div class="container">
+<div class="row">
+<header class="col-xs-12">
+    <h1>{$subject}</h1>
+    <p class="btn-group">
+        <a class="btn btn-default" href="{$BBSPATH}">掲示板トップ</a>
+        <a class="btn btn-default" href="{$BBSPATH_ARCHIVE}">過去ログ</a>
+        <a class="btn btn-default" href="{$BBSPATH_RSS}" target="_blank">RSS</a>
+    </p>
+</header><!-- .col-xs-12 -->
+<div class="col-xs-12">
+
+<!-- エラーメッセージの表示 -->
+<span class="error">{$error}</span>
+
+{$id}. {$name} - {$time} - [<a href="{$remove_anchor}" rel="nofollow">削除</a>]<br>
+
+<p>{$body_html}</p>
+{$file_link}
+<hr>
+
+</div><!-- .col-* -->
+<footer class="col-xs-12">
+    <p class="btn-group">
+    <a class="btn btn-default" href="#top">↑ページ上部へ戻る</a>
+    </p>
+</footer>
+</div>
+</div><!-- .container -->
+</body>
+</html>
